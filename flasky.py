@@ -1,7 +1,11 @@
 # hello world web app
 from flask import Flask, url_for, redirect, request         # import flask
 import shakes as Shakey
-app = Flask(__name__)             # create an app instance
+app = Flask(__name__) 
+@app.route("/")
+def index():
+	return render_template('index.html')
+
 @app.route("/haiku")
 def printy():
 	try:

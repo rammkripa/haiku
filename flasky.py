@@ -4,7 +4,7 @@ import shakes as Shakey
 app = Flask(__name__) 
 @app.route("/")
 def index():
-	return render_template('index.html')
+	return render_template('tempeh.html')
 
 @app.route("/generate")
 def printy():

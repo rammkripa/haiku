@@ -1,5 +1,5 @@
 # hello world web app
-from flask import Flask, url_for, redirect, request         # import flask
+from flask import Flask, url_for, redirect, request, render_template         # import flask
 import shakes as Shakey
 app = Flask(__name__) 
 @app.route("/")

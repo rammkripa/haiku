@@ -6,10 +6,17 @@ app = Flask(__name__)
 def index():
 	return render_template('tempeh.html')
 
-@app.route("/generate")
+@app.route("/generatehaiku")
 def printy():
 	try:
 		return Shakey.create_random_haiku() 
+	except:
+		return printy()
+
+@app.route("/generatesentence")
+def printsent():
+	try:
+		return Shakey.new_line()
 	except:
 		return printy()
 
